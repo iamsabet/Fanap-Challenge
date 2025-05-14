@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
 import Footer from "@/components/Footer";
-import { getThemeFromCookies } from "@/lib/utils";
+import { getThemeFromCookies } from "@/lib/middlewares/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <TopNav theme={theme} />
-        <main>
+        <main className="pt-18">
           {children}
         </main>
         <Footer />

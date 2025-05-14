@@ -5,7 +5,7 @@
 :root {
   --background: rgb(255, 255, 255);
   --foreground: rgb(15, 20, 25);
-  --card: rgb(247, 248, 248);
+  --card: rgba(238, 238, 238, 1);
   --card-foreground: rgb(15, 20, 25);
   --popover: rgb(255, 255, 255);
   --popover-foreground: rgb(15, 20, 25);
@@ -13,7 +13,7 @@
   --primary-foreground: rgb(255, 255, 255);
   --secondary: rgb(15, 20, 25);
   --secondary-foreground: rgb(255, 255, 255);
-  --muted: rgb(229, 229, 230);
+  --muted: rgba(233, 233, 233, 1);
   --muted-foreground: rgb(15, 20, 25);
   --accent: rgb(227, 236, 246);
   --accent-foreground: rgb(30, 157, 241);

@@ -4,7 +4,8 @@ export const paginateProducts = async ({ page = 1, limit = 20, sort = "title", o
 
     try {
         const skip = (page - 1) * limit
-        const data = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}&sortBy=${sort}&order=${order}&select=title,price,rating,stock,images,thumbnail,meta,discountPercentage,category`)
+        const select = `id,title,price,rating,stock,images,thumbnail,meta,discountPercentage,category,description,tags`
+        const data = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}&sortBy=${sort}&order=${order}&select=${select}`)
             .then((item) => item.json())
         return data
     } catch (e) {
@@ -12,12 +13,13 @@ export const paginateProducts = async ({ page = 1, limit = 20, sort = "title", o
     }
 }
 
-export const fetchProduct = async ({ id }: FetchProductProps) => {
+export const fetchProduct = async ({ id }: FetchProductProps): Promise<{ data: ProductItemType | null, message?: string }> => {
 
     try {
         const data = await fetch(`https://dummyjson.com/products/${id}`)
-        return data
+            .then((item) => item.json())
+        return { data: data }
     } catch (e) {
-        return { message: e }
+        return { message: JSON.stringify(e), data: null }
     }
 }

@@ -9,6 +9,8 @@ const ThemeButton = ({ initTheme }: { initTheme: string }) => {
   const { theme, set } = useTheme(initTheme);
   useLayoutEffect(() => {
     set(initTheme);
+
+
     return () => { };
   }, []);
   return (

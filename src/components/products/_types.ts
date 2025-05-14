@@ -14,7 +14,9 @@ interface ProductItemType {
         qrCode: string
     },
     discountPercentage: number,
-    category: string
+    category: string,
+    description: string,
+    tags?: string[]
 }
 interface GridViewProps {
     products: ProductItemType[],
