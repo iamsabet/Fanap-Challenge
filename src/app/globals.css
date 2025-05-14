@@ -173,5 +173,5 @@ h3 {
 }
 
 .box-size {
-  @apply max-w-[1280px] mx-auto
+  @apply max-w-[1400px] mx-auto max-[1400px]:w-full px-2 max-md:px-3;
 }

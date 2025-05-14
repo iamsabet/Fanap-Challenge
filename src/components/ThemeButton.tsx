@@ -26,7 +26,7 @@ const ThemeButton = ({ initTheme }: { initTheme: string }) => {
         >
           <IoContrast
             className={`${theme === "dark" ? "rotate-180" : ""}
-              transition-all duration-300 ease-linear`}
+              transition-all duration-150 ease-linear`}
             size={28}
           />
         </div>
