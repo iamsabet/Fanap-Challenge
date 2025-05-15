@@ -1,6 +1,6 @@
 "use server"
 
-export const paginateProducts = async ({ page = 1, limit = 20, sort = "title", order = "asc" }: PaginateProductProps) => {
+export const paginateProducts = async ({ page = 1, limit = 24, sort = "title", order = "desc" }: PaginateProductProps) => {
 
     try {
         const skip = (page - 1) * limit

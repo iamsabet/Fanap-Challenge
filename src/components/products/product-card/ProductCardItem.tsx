@@ -5,12 +5,12 @@ import Image from "next/image"
 import Link from "next/link"
 import CategoryBadge from "./CategoryBadge"
 import RatingSingleIcon from "./RatingSingleIcon"
-import ProductCardInfo from "./product-card/ProductCardInfo"
-import { clearProduct } from "@/app/store/product.store"
+import ProductCardInfo from "./ProductCardInfo"
+import { clearProduct } from "@/lib/store/product.store"
 
 const ProductCardItem = ({ product }: { product: ProductItemType }) => {
     return (
-        <article className="relative shadow-sm transition-all duration-150 ease-linear rounded-sm
+        <article className="relative shadow-sm transition-all duration-150 ease-linear rounded-[12px]
         flex flex-col items-center justify-start gap-y-1 pb-2 max-sm:pb-1.5
         bg-muted mx-1 h-full group">
             <Link onClick={(() => {

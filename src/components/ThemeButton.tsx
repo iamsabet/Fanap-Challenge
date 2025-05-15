@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import useTheme from "@/app/hooks/useTheme";
+import useTheme from "@/lib/hooks/useTheme";
 import { IoContrast } from "react-icons/io5";
 import { useLayoutEffect } from "react";
 

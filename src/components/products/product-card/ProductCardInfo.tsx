@@ -1,10 +1,10 @@
 import React from 'react'
-import RatingStars from '../RatingStars'
+import RatingStars from './RatingStars'
 
 const ProductCardInfo = ({ rating, price, title }: { rating: number, price: number, title: string }) => {
     return (
-        <div className="w-full flex flex-col items-center justify-start gap-y-2 px-2">
-            <div className="w-full flex justify-between items-center pt-1">
+        <div className="w-full flex flex-col items-center justify-start gap-y-2 px-3 max-sm:px-2">
+            <div className="w-full flex justify-between items-center pt-2">
                 <RatingStars rating={rating} />
                 {/* Price Tag */}
                 <span className="transition-all duration-150 ease-linear

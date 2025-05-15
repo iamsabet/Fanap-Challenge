@@ -1,12 +1,12 @@
 "use client"
 
-import { productPageState } from '@/app/store/product.store';
+import { productPageState } from '@/lib/store/product.store';
 import React from 'react'
 import { useSnapshot } from 'valtio';
 import { Skeleton } from '../ui/skeleton';
-import CategoryBadge from '../products/CategoryBadge';
-import RatingSingleIcon from '../products/RatingSingleIcon';
-import RatingStars from '../products/RatingStars';
+import CategoryBadge from '../products/product-card/CategoryBadge';
+import RatingSingleIcon from '../products/product-card/RatingSingleIcon';
+import RatingStars from '../products/product-card/RatingStars';
 
 const ProductDetails = ({ pr }: { pr?: ProductItemType }) => {
     const { product: storeProduct } = useSnapshot(productPageState);

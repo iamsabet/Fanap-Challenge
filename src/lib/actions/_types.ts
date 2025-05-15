@@ -3,7 +3,7 @@ interface PaginateProductProps {
     page: number
     limit: number,
     sort?: "title" | "price" | "rating",
-    order?: "asc" | "des"
+    order?: "asc" | "desc"
 }
 
 interface FetchProductProps {

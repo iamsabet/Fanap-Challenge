@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Skeleton } from '../ui/skeleton'
-import { productPageState } from '@/app/store/product.store'
+import { productPageState } from '@/lib/store/product.store'
 import { useSnapshot } from 'valtio'
 
 const ProductImages = () => {

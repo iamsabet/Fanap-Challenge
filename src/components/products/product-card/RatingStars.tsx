@@ -18,7 +18,7 @@ const RatingStars = ({ rating }: { rating: number }) => {
                 >
                     <FaStar className="text-transparent absolute z-2" />
                     <div className='relative' style={{ width: "1em", height: "1em" }}>
-                        <FaStar className="text-muted-foreground w-full h-full" />
+                        <FaStar className="text-muted w-full h-full" />
                         <div
                             style={{ width: `${(partialStarPercentage) * 100}%` }}
                             className="bg-transparent top-0 left-0 absolute overflow-hidden h-full w-full z-3">

@@ -4,7 +4,7 @@
 import React, { useEffect } from 'react';
 import ProductImages from "./ProductImages";
 import { useSnapshot } from 'valtio/react';
-import { clearProduct, fetchProduct, productPageState } from '@/app/store/product.store';
+import { clearProduct, fetchProduct, productPageState } from '@/lib/store/product.store';
 import ProductDetails from './ProductDetails';
 
 const ProductPage = ({ id }: { id: number }) => {
