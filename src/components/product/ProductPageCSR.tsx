@@ -9,15 +9,22 @@ import ProductImages from "./ProductImages";
 import ProductDetails from './ProductDetails';
 import { useProductPageStore } from '../../lib/store/product-z.store';
 import Metadata from './Metadata';
+import { useShopPageState } from '@/lib/store/shop-z.store';
 
 const ProductPage = ({ id }: { id: number }) => {
     // const { product, isLoading, isError } = useSnapshot(productPageState);
-    const { product, isLoading, isError, clearProduct, fetchProduct } = useProductPageStore()
-
+    const { product, isLoading, isError, clearProduct, fetchProduct, setProduct } = useProductPageStore()
+    const { fetchProductFromShop } = useShopPageState()
     useEffect(() => {
         if (!isLoading) {
-            clearProduct()
-            fetchProduct(id);
+            const cachedProduct = fetchProductFromShop(id)
+            if (cachedProduct) {
+                setProduct(cachedProduct)
+            }
+            else {
+                clearProduct()
+                fetchProduct(id);
+            }
         }
         return () => { }
     }, [])

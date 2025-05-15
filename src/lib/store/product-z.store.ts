@@ -1,20 +1,25 @@
 import { create } from 'zustand'
 
-type ProductPageState = {
+interface ProductPageState {
     product: ProductItemType | null;
     isLoading: boolean;
     isError: boolean;
     error: Error | null;
+}
+interface ProductPageActions {
     fetchProduct: (id: number) => Promise<void>;
+    setProduct: (product: ProductItemType) => void;
     clearProduct: () => void;
 }
 
-export const useProductPageStore = create<ProductPageState>(set => ({
+export const useProductPageStore = create<ProductPageState & ProductPageActions>(set => ({
     product: null,
     isLoading: false,
     isError: false,
     error: null,
-
+    setProduct: async (product) => {
+        set({ product })
+    },
     fetchProduct: async (id: number) => {
         set({ product: null, isLoading: true, isError: false, error: null });
         try {
