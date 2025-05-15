@@ -1,14 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client"
-import { useSnapshot } from "valtio";
+// import { useSnapshot } from "valtio";
 import ProductCardItem from "./product-card/ProductCardItem";
 import ProductCardSkeleton from "./product-card/ProductCardSkeleton";
-import { paginateProductsClientSide, shopPageState } from "@/lib/store/shop.store";
+// import { paginateProductsClientSide, shopPageState } from "@/lib/store/shop.store";
 import { useEffect } from "react";
 import Pagination from "./Pagination";
+import { useShopPageState } from "@/lib/store/shop-z.store";
 
 const ProductsGridViewCSR = ({ page = 1 }: { page: number }) => {
-    const { products: productsMap, total, isLoading } = useSnapshot(shopPageState);
+    // const { products: productsMap, total, isLoading } = useSnapshot(shopPageState);
+    const { products: productsMap, total, isLoading, paginateProductsClientSide } = useShopPageState()
     useEffect(() => {
         if (!isLoading && !productsMap[page]) {
             paginateProductsClientSide({ page: page, limit: 24 });
@@ -28,7 +30,7 @@ const ProductsGridViewCSR = ({ page = 1 }: { page: number }) => {
                 {!products ? Array.from({ length: 24 }, (_, i) => i).map((i) =>
                     <ProductCardSkeleton key={"skeleton-" + i} />
                 ) : products.map((item) =>
-                    <ProductCardItem key={"p-" + item.id} product={JSON.parse(JSON.stringify(item))} />
+                    <ProductCardItem key={"p-" + item.id} product={JSON.parse(JSON.stringify(item))} csr={true} />
                 )}
             </div>
             <Pagination id={"last"} limit={24} csr={true} total={total} loaded={!!products} />

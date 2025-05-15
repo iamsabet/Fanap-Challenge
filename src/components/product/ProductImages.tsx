@@ -3,12 +3,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { Skeleton } from '../ui/skeleton'
-import { productPageState } from '@/lib/store/product.store'
-import { useSnapshot } from 'valtio'
 
-const ProductImages = () => {
+const ProductImages = ({ product }: { product: ProductItemType }) => {
 
-    const { product } = useSnapshot(productPageState);
 
     return (
         <div className={`mx-auto sm:w-[400px] sm:h-[400px] w-full h-auto rounded-md bg-transparent`}>

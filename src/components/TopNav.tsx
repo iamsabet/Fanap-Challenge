@@ -16,15 +16,15 @@ const TopNav = ({ theme }: { theme: string }) => {
                         <span className="sm:hidden">Fanap </span>
                     </div>
                 </Link>
-                <ul className="flex items-center justify-center gap-x-2 h-full">
-                    <Link href="/" className="flex items-center justify-start gap-x-2 group pl-2">
-                        <div className={`font-semibold group-hover:text-primary ${pathname.split("csr").length === 1 ? "text-primary" : ""}`}><span>SSR</span></div>
-                    </Link>
-                    <Link href="/csr" className={`flex items-center justify-start gap-x-2 group pl-2`}>
-                        <div className={`font-semibold group-hover:text-primary ${pathname.split("csr").length > 1 ? "text-primary" : ""}`}><span>CSR</span></div>
-                    </Link>
-                </ul>
                 <div className="flex items-center justify-end gap-x-2 pr-1">
+                    <ul className="flex items-center justify-center gap-x-2 h-full mt-0.5">
+                        <Link href="/" className="flex items-center justify-start gap-x-2 group pl-2">
+                            <div className={`font-semibold group-hover:text-primary ${pathname.split("csr").length === 1 ? "text-primary" : ""}`}><span>SSR</span></div>
+                        </Link>
+                        <Link href="/csr" className={`flex items-center justify-start gap-x-2 group pl-2`}>
+                            <div className={`font-semibold group-hover:text-primary ${pathname.split("csr").length > 1 ? "text-primary" : ""}`}><span>CSR</span></div>
+                        </Link>
+                    </ul>
                     <ThemeButton initTheme={theme} />
                 </div>
             </div>

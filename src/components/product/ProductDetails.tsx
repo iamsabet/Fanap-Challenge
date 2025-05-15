@@ -1,16 +1,12 @@
 "use client"
 
-import { productPageState } from '@/lib/store/product.store';
 import React from 'react'
-import { useSnapshot } from 'valtio';
 import { Skeleton } from '../ui/skeleton';
 import CategoryBadge from '../products/product-card/CategoryBadge';
 import RatingSingleIcon from '../products/product-card/RatingSingleIcon';
 import RatingStars from '../products/product-card/RatingStars';
 
-const ProductDetails = ({ pr }: { pr?: ProductItemType }) => {
-    const { product: storeProduct } = useSnapshot(productPageState);
-    const product = pr || storeProduct
+const ProductDetails = ({ product }: { product?: ProductItemType }) => {
     return (
         <div className="flex-1 w-full flex flex-col items-start justify-start gap-y-2 px-2">
 
