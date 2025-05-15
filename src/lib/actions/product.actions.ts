@@ -5,7 +5,7 @@ export const paginateProducts = async ({ page = 1, limit = 24, sort = "title", o
     try {
         const skip = (page - 1) * limit
         const select = `id,title,price,rating,stock,images,thumbnail,meta,discountPercentage,category,description,tags`
-        const data = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}&sortBy=${sort}&order=${order}&select=${select}`)
+        const data = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}&select=${select}`)
             .then((item) => item.json())
         return data
     } catch (e) {
