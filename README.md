@@ -18,7 +18,7 @@ pnpm run start
 <ul>
   <li> Nextjs 15 , React 19</li>
   <li> Tailwindcss 4 , Shadcn/ui(Only Skeletons) </li>
-  <li> Zustand(state-management & persist), React Hooks(to manage the LifeCyle Events, not state management), Custom Hooks(For Theme Button + Cookie manipulation and server side loading for the theme class using /src/lib/middlewares) </li>
+  <li> Zustand(state-management), React Hooks(to manage the LifeCyle Events, not state management), Custom Hooks(For Theme Button + Cookie manipulation and server side loading for the theme class using /src/lib/middlewares) </li>
 </ul>
 
 ### Notes
