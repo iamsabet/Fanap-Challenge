@@ -1,7 +1,8 @@
 {
   "name": "fanap_challenge",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
+  "author": "sabet",
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -23,7 +24,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.6",
-    "@types/node": "^20",
+    "@types/node": "^20.17.47",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
