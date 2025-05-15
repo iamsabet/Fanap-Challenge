@@ -2,17 +2,13 @@
 'use client';
 
 import { useEffect } from 'react';
-// import { Helmet } from "react-helmet";
 import ProductImages from "./ProductImages";
-// import { useSnapshot } from 'valtio/react';
-// import { clearProduct, fetchProduct } from '@/lib/store/product.store';
 import ProductDetails from './ProductDetails';
-import { useProductPageStore } from '../../lib/store/product-z.store';
+import { useProductPageStore } from '../../lib/store/product.store';
 import Metadata from './Metadata';
-import { useShopPageState } from '@/lib/store/shop-z.store';
+import { useShopPageState } from '@/lib/store/shop.store';
 
 const ProductPage = ({ id }: { id: number }) => {
-    // const { product, isLoading, isError } = useSnapshot(productPageState);
     const { product, isLoading, isError, clearProduct, fetchProduct, setProduct } = useProductPageStore()
     const { fetchProductFromShop } = useShopPageState()
     useEffect(() => {

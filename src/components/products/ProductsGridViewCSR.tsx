@@ -1,15 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client"
-// import { useSnapshot } from "valtio";
 import ProductCardItem from "./product-card/ProductCardItem";
 import ProductCardSkeleton from "./product-card/ProductCardSkeleton";
-// import { paginateProductsClientSide, shopPageState } from "@/lib/store/shop.store";
 import { useEffect } from "react";
 import Pagination from "./Pagination";
-import { useShopPageState } from "@/lib/store/shop-z.store";
+import { useShopPageState } from "@/lib/store/shop.store";
 
 const ProductsGridViewCSR = ({ page = 1 }: { page: number }) => {
-    // const { products: productsMap, total, isLoading } = useSnapshot(shopPageState);
     const { products: productsMap, total, isLoading, paginateProductsClientSide } = useShopPageState()
     useEffect(() => {
         if (!isLoading && !productsMap[page]) {

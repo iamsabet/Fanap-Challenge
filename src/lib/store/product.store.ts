@@ -1,44 +1,42 @@
-import { proxy } from "valtio";
+import { create } from 'zustand'
 
-type ProductPageState = {
+interface ProductPageState {
     product: ProductItemType | null;
     isLoading: boolean;
     isError: boolean;
     error: Error | null;
 }
+interface ProductPageActions {
+    fetchProduct: (id: number) => Promise<void>;
+    setProduct: (product: ProductItemType) => void;
+    clearProduct: () => void;
+}
 
-export const productPageState = proxy<ProductPageState>({
+export const useProductPageStore = create<ProductPageState & ProductPageActions>(set => ({
     product: null,
     isLoading: false,
     isError: false,
     error: null,
+    setProduct: async (product) => {
+        set({ product })
+    },
+    fetchProduct: async (id: number) => {
+        set({ product: null, isLoading: true, isError: false, error: null });
+        try {
+            const response = await fetch(`https://dummyjson.com/products/${id}`);
+            if (!response.ok) {
+                set({ isError: true, isLoading: false });
+                throw new Error('Network response was not ok');
+            }
 
-});
-
-export const fetchProduct = async (id: number) => {
-    productPageState.product = null;
-    productPageState.isLoading = true;
-    productPageState.isError = false;
-    productPageState.error = null;
-    try {
-        const response = await fetch(`https://dummyjson.com/products/${id}`);
-        if (!response.ok) {
-            productPageState.isError = true;
-            productPageState.isLoading = false;
-            throw new Error('Network response was not ok');
+            const product = await response.json();
+            set({ product, isLoading: false });
+        } catch (error) {
+            set({ isError: true, error: error as Error, isLoading: false });
         }
-        const product = await response.json();
-        productPageState.product = product;
-        productPageState.isLoading = false;
-    } catch (error) {
-        productPageState.isError = true;
-        productPageState.error = error as Error;
-        productPageState.isLoading = false;
+    },
+
+    clearProduct: () => {
+        set({ isLoading: false, isError: false, error: null, product: null });
     }
-}
-export const clearProduct = async () => {
-    productPageState.isLoading = false;
-    productPageState.isError = false;
-    productPageState.error = null;
-    productPageState.product = null
-}
+}));
