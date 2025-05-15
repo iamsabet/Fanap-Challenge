@@ -1,4 +1,4 @@
-"use server"
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 export const paginateProducts = async ({ page = 1, limit = 24, sort = "title", order = "desc" }: PaginateProductProps) => {
 
