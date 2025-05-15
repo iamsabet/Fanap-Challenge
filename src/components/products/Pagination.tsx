@@ -32,7 +32,6 @@ const Pagination = ({
             </li>
         );
     });
-
     return (
         <div className="flex w-full h-auto items-center justify-center pt-2 pb-4">{!loaded
             ? <Skeleton className="h-6" />
