@@ -14,7 +14,7 @@ const TopNav = ({ theme }: { theme: string }) => {
     const isCSR = pathname.split("csr").length > 1;
     const isSSR = !isCSR;
     return (
-        <nav className="fixed bg-card w-full flex items-center justify-center z-10">
+        <nav className="fixed bg-card w-full flex items-center justify-center z-10 shadow-sm">
             <div className="box-size w-full mx-auto flex items-center justify-between h-14">
                 <Link href={pathname.split("csr").length > 1 ? "/csr" : "/"} className="flex items-center justify-start gap-x-2 group pl-2 max-sm:pl-1">
                     <Logo />

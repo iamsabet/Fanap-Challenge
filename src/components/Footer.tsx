@@ -3,7 +3,7 @@ import Avatar from "./shared/Avatar"
 
 const Footer = () => {
   return (
-    <footer className="bg-card w-full">
+    <footer className="bg-card w-full shadow-sm">
       <div className="box-size py-6 h-auto pb-10">
         <div className="flex items-center justify-between px-1">
           <div className="flex justify-start items-center gap-x-3">
