@@ -32,4 +32,6 @@ I've implemented both CSR and SSR approaches
   -- Clear LocalStorage Button on the top nav when in CSR Mode to clear localStorage and refresh
 - tailwind / shadcn color pallete in global.css with some basic styling and font-sizing for several semantic tags
 ```
+![Fanap Challenge Demo Picture](https://github.com/iamsabet/Fanap-Challenge/blob/main/public/s1.png "Logo Title Text 1")
+
 ### Deployed on Vercel [Live_Demo](https://fanap-challenge.vercel.app)
