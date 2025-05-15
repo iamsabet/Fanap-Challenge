@@ -8,7 +8,7 @@ const ProductCardSkeleton = () => {
         bg-muted mx-1 h-full group">
             <div className="w-full h-full relative">
                 <Skeleton
-                    className="mx-auto w-[200-px] h-[200px] relative rounded-[12px] bg-muted-foreground opacity-60"
+                    className="mx-auto w-[200-px] h-[200px] relative rounded-[12px] bg-muted-foreground opacity-70"
                 />
                 <ProductCardInfoSkeleton />
             </div>
