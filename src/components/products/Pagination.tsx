@@ -33,7 +33,7 @@ const Pagination = ({
         );
     });
     return (
-        <div className="flex w-full h-auto items-center justify-center pt-2 pb-4">{!loaded
+        <div className="flex w-full h-auto items-center justify-center pt-1 pb-4">{!loaded
             ? <Skeleton className="h-6" />
             : <ul className="p-0 m-0 w-full flex flex-wrap items-center justify-center gap-x-1 gap-y-2">{pageLinks}</ul>}
         </div>
