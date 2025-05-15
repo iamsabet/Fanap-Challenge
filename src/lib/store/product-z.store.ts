@@ -23,6 +23,7 @@ export const useProductPageStore = create<ProductPageState>(set => ({
                 set({ isError: true, isLoading: false });
                 throw new Error('Network response was not ok');
             }
+
             const product = await response.json();
             set({ product, isLoading: false });
         } catch (error) {

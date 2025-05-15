@@ -1,10 +1,5 @@
 import { create } from 'zustand'
 
-type PaginateProductProps = {
-    page?: number;
-    limit?: number;
-}
-
 type ShopPageState = {
     products: { [key: number]: ProductItemType[] },
     total: number,
