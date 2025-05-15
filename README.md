@@ -28,7 +28,7 @@ I've implemented both CSR and SSR approaches
 - The SSR does not use any state manager and has basic metadata using generateMetaData for product/[id] and metaData for the pagination pages
   -- fetching data using server actions
 - The CSR on the other hand uses Zustand for state management in 2 stores (shop.store.ts & product.store.ts) inside /src/lib/store
-  -- by leveraging zustand/middleware implemented, state persistance on localStorage only for shop.store with
+  -- by leveraging zustand/middleware, implemented state persistance on localStorage only for shop.store
   -- implemented client side fetching with loading status and basic error handling (404 and 400) for product/[id] and /product-csr/[id] for showcasing
   -- Clear LocalStorage Button on the top nav when in CSR Mode to clear localStorage and refresh
 - tailwind / shadcn color pallete in global.css with some basic styling and font-sizing for several semantic tags
