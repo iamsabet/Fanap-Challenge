@@ -18,7 +18,7 @@ pnpm run start
 <ul>
   <li> Nextjs 15 , React 19</li>
   <li> Tailwindcss 4 , Shadcn/ui(Only Skeletons) </li>
-  <li> Zustand(state-management), React Hooks(to manage the LifeCyle Events, not state management), Custom Hooks(For Theme Button + Cookie manipulation and server side loading for the theme class using /src/lib/middlewares) </li>
+  <li> Zustand(state-management), React Hooks(to manage the LifeCyle Events), Custom Hooks(useTheme For Theme Button + Cookie manipulation and server side loading for the theme class using /src/lib/middlewares) </li>
 </ul>
 
 ### Notes
@@ -33,6 +33,10 @@ I've implemented both CSR and SSR approaches
   -- Clear LocalStorage Button on the top nav when in CSR Mode to clear localStorage and refresh
 - tailwind / shadcn color pallete in global.css with some basic styling and font-sizing for several semantic tags
 ```
+
 ![Fanap Challenge Demo Picture](https://github.com/iamsabet/Fanap-Challenge/blob/main/public/s1.png "Logo Title Text 1")
 
+#### Feel free to Start ⭐ the brother up if you liked it
+
 ### Deployed on Vercel [Live_Demo](https://fanap-challenge.vercel.app)
+
