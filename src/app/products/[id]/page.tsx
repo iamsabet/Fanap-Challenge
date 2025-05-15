@@ -38,7 +38,7 @@ export default async function product({ params }: { params: Promise<{ id: string
                     <div className="w-full block py-4">
                         <div className="px-0">
                             {isNaN(Number(id)) ? <h1>400 - WrongProduct Id</h1> :
-                                <ProductPage product={!product.message ? product.data : null} />
+                                <ProductPage product={product && product.data ? product.data : null} />
                             }
                         </div>
                     </div>

@@ -18,7 +18,10 @@ export const fetchProduct = async ({ id }: FetchProductProps): Promise<{ data: P
     try {
         const data = await fetch(`https://dummyjson.com/products/${id}`)
             .then((item) => item.json())
-        return { data: data }
+        if (data.message) {
+            return { ...data, data: null }
+        }
+        return { data }
     } catch (e) {
         return { message: JSON.stringify(e), data: null }
     }

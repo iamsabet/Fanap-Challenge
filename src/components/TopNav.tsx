@@ -3,6 +3,7 @@ import Logo from "./shared/Logo"
 import Link from "next/link"
 import ThemeButton from "./ThemeButton"
 import { usePathname } from "next/navigation"
+import { BiLogoGithub } from "react-icons/bi"
 const TopNav = ({ theme }: { theme: string }) => {
     const pathname = usePathname()
     console.log(pathname)
@@ -16,8 +17,8 @@ const TopNav = ({ theme }: { theme: string }) => {
                         <span className="sm:hidden">Fanap </span>
                     </div>
                 </Link>
-                <div className="flex items-center justify-end gap-x-2 pr-1">
-                    <ul className="flex items-center justify-center gap-x-2 h-full mt-0.5">
+                <div className="flex items-center justify-end gap-x-1 pr-1">
+                    <ul className="flex items-center justify-center gap-x-1 h-full mt-0.5">
                         <Link href="/" className="flex items-center justify-start gap-x-2 group pl-2">
                             <div className={`font-semibold group-hover:text-primary ${pathname.split("csr").length === 1 ? "text-primary" : ""}`}><span>SSR</span></div>
                         </Link>
@@ -26,6 +27,7 @@ const TopNav = ({ theme }: { theme: string }) => {
                         </Link>
                     </ul>
                     <ThemeButton initTheme={theme} />
+                    <Link target="_blank" href="https://github.com/iamsabet/Fanap-Challenge" className="px-0 text-[1.82rem] hover:text-primary"><BiLogoGithub /></Link>
                 </div>
             </div>
         </nav>

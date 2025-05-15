@@ -5,7 +5,7 @@ import ProductImages from "./ProductImages";
 import ProductDetails from './ProductDetails';
 
 const ProductPage = ({ product }: { product: ProductItemType | null }) => {
-
+    // console.log(product)
     return (
         <>{product ?
             <article className="w-full flex items-start gap-x-7 gap-y-2 max-sm:flex-col">

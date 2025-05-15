@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
       { hostname: '*' },
       { hostname: 'localhost', protocol: "http" },
       { hostname: 'cdn.dummyjson.com', protocol: "https" },
-      { hostname: 'dummyjson.com', protocol: "https" }
+      { hostname: 'avatars.githubusercontent.com', protocol: 'https' }
     ],
   },
 };
