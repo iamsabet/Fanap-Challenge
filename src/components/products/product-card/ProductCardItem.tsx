@@ -6,9 +6,10 @@ import Link from "next/link"
 import CategoryBadge from "./CategoryBadge"
 import RatingSingleIcon from "./RatingSingleIcon"
 import ProductCardInfo from "./ProductCardInfo"
-import { clearProduct } from "@/lib/store/product.store"
+import { useProductPageStore } from '@/lib/store/product.store';
 
 const ProductCardItem = ({ product, csr = false }: { product: ProductItemType, csr?: boolean }) => {
+    const { clearProduct } = useProductPageStore()
     return (
         <article className="relative shadow-sm transition-all duration-150 ease-linear rounded-[12px]
         flex flex-col items-center justify-start gap-y-1 pb-2 max-sm:pb-1.5
