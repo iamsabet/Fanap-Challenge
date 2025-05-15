@@ -8,7 +8,7 @@ const ProductImages = ({ product }: { product: ProductItemType }) => {
 
 
     return (
-        <div className={`mx-auto sm:w-[400px] sm:h-[400px] w-full h-auto rounded-md bg-transparent`}>
+        <div className={`relative mx-auto sm:w-[400px] sm:h-[400px] w-full h-auto rounded-md bg-transparent`}>
             {product?.thumbnail ? <Image
                 className="aspect-square rounded-sm bg-card overflow-hidden object-contain mx-auto"
                 src={product.thumbnail}
@@ -19,7 +19,7 @@ const ProductImages = ({ product }: { product: ProductItemType }) => {
                 decoding='async'
                 priority
             />
-                : <Skeleton className={`mx-auto w-[400px] h-[400px] rounded-md bg-sidebar-border`} />
+                : <Skeleton className={`mx-auto sm:w-[400px] sm:h-[400px] aspect-square w-full rounded-md bg-sidebar-border`} />
 
             }
         </div>

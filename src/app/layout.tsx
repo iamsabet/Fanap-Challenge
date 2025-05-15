@@ -28,6 +28,9 @@ export default async function RootLayout({
   const theme = await getThemeFromCookies();
   return (
     <html lang="en" dir="ltr" className={theme} suppressHydrationWarning={true}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
