@@ -36,7 +36,7 @@ I've implemented both CSR and SSR approaches
 
 ![Fanap Challenge Demo Picture](https://github.com/iamsabet/Fanap-Challenge/blob/main/public/s1.png "Logo Title Text 1")
 
-#### Feel free to Start ⭐ the brother up if you liked it
+### Feel free to Start ⭐ the brother up if you liked it
 
-### Deployed on Vercel [Live_Demo](https://fanap-challenge.vercel.app)
+## Deployed on Vercel [Live_Demo](https://fanap-challenge.vercel.app)
 
