@@ -35,7 +35,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <TopNav theme={theme} />
-        <main className="pt-18">
+        <main className="pt-16">
           {children}
         </main>
         <Footer />
