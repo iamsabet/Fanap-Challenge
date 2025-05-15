@@ -24,8 +24,7 @@ const ProductDetails = ({ product }: { product?: ProductItemType }) => {
                 </div>
             </div> :
                 <div className='w-full flex flex-col items-start gap-y-4 justify-start'>
-
-                    <h1 className=''>{product?.title} </h1>
+                    <h1 className='max-sm:pt-1'>{product?.title} </h1>
                     <div className='flex items-center justify-start gap-x-3'>
                         <CategoryBadge position='relative' category={product.category} />
                     </div>
