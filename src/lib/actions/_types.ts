@@ -6,6 +6,7 @@ interface PaginateProductProps {
     order?: "asc" | "desc"
 }
 
+
 interface FetchProductProps {
     id: number
 }
